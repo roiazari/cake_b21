@@ -1,5 +1,4 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import './App.css'
+import { HashRouter, Route, Routes } from 'react-router-dom';import './App.css'
 import Home from './pages/Home'
 import Gallery from './pages/Gallery'
 import { createContext, useState } from 'react'
@@ -28,7 +27,7 @@ function App() {
   }
 
   return (
-    <BrowserRouter basename="/cake_b21">
+  <HashRouter>
       {/* הוספנו את updateCount ל-Value של ה-Context */}
       <myContext.Provider value={{ addProducts, deleteProduct, updateCount, products }}>
         <Routes>
@@ -47,7 +46,7 @@ function App() {
           <FaWhatsapp />
         </a>
       </myContext.Provider>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 

@@ -28,7 +28,7 @@ function App() {
   }
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/cake_b21">
       {/* הוספנו את updateCount ל-Value של ה-Context */}
       <myContext.Provider value={{ addProducts, deleteProduct, updateCount, products }}>
         <Routes>
